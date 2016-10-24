@@ -1,0 +1,174 @@
+html,body{
+    background-color: #f6f5f5;
+}
+.vg-body{
+    width: 1390px;
+    margin:0 auto;
+}
+
+/*任务成长值*/
+.vg_title{
+    font-size: 24px;
+    line-height: 24px;
+    padding:20px 0;
+    color:#464646;
+}
+.vg_task{
+    background-color: #fff;
+    position: relative;
+}
+.vg_task .arrowbtn-left,.vg_task .arrowbtn-right{
+    position: absolute;
+    top:70px;
+    width: 32px;
+    height: 22px;
+    cursor: pointer;
+    background:url(../img/3.gif) no-repeat;
+}
+.vg_task .arrowbtn-left{
+    left: 40px;
+    background-position: 0 0;
+}
+.vg_task .arrowbtn-right{
+    right: 40px;
+   background-position: -31px 0;
+}
+.vg_tasklist{
+    width: 1200px;
+    overflow: hidden;
+    margin:0 auto;
+}
+.vg_tasklist ul{
+	width: 999%;
+}
+.vg_tasklist li{
+    width: 258px;
+    height: 130px;
+    float: left;
+    border:1px solid #c8c8c8;
+    margin:15px  53px 15px 0;
+    position: relative;
+}
+.vg_tasklist li .task_hover{
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    width: 212px;
+    padding:20px 25px 20px 23px;
+    height: 90px;
+    border-bottom: 2px solid #e65a5a;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    display: none;
+}
+.vg_tasklist li:hover .task_hover{
+    display: block;
+}
+
+.task_hover .task_desc{
+    font-size: 16px;
+    line-height: 20px;
+    color:#646464;    
+}
+
+.task_hover  .task_limittimes{
+    font-size: 14px;
+    color: #787878;
+    float: left;
+    padding-top: 12px;
+}
+
+.vg_tasklist li img{
+    float: left;
+    width: 90px;
+    margin: 22px 8px 20px 20px;
+}
+.vg_tasklist li .rightinfo{
+    width: 136px;
+    float: left;
+    text-align: center;
+}
+.rightinfo h3{
+    font-size: 16px;
+    color: #646464;
+    padding-top: 15px;
+}
+.rightinfo p{
+    font-size: 14px;
+    line-height: 26px;
+    color: #787878;
+}
+.rightinfo a,.task_hover  a{
+    display: block;
+    text-align: center;
+    width: 96px;
+    height: 30px;
+    line-height: 30px;
+    border:2px solid #e65a5a;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #e65a5a;
+}
+.task_hover a.done,.task_hover a.done:hover{
+    background-color: #b4b4b4;
+    color: #fff;
+    border-color: #b4b4b4;
+    cursor: default;
+}
+
+.rightinfo a{
+    margin: 12px  auto 0;
+}
+.task_hover  a{
+    float: right;
+    margin-top: 18px;
+    margin-right: -4px;
+}
+.task_hover  a:hover{
+    text-decoration: none;
+    background-color: #e65a5a;
+    color: #fff;
+}
+
+/*grid-1230*/
+.grid-1230 .vg-body{
+    width: 1210px;
+}
+.grid-1230 .vg_tasklist{
+    width: 1090px;
+}
+.grid-1230 .vg_tasklist li{
+    margin-right: 16px;
+}
+
+.grid-1230 .vg_task .arrowbtn-left{
+    left: 23px;
+}
+.grid-1230 .vg_task .arrowbtn-right{
+    right: 23px;
+}
+.grid-1230 .vg_growth_table {
+    padding:24px 30px;
+}
+/*grid-1010*/
+.grid-1010 .vg-body{
+    width: 990px;
+}
+.grid-1010 .vg_tasklist{
+    width: 850px;
+}
+.grid-1010 .vg_tasklist li{
+    margin-right: 35px;
+}
+
+.grid-1010 .vg_task .arrowbtn-left{
+    left: 30px;
+}
+.grid-1010 .vg_task .arrowbtn-right{
+    right: 30px;
+}
+
+.grid-1010 .vg_growth_table {
+    padding:24px;
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/vipgrowth.css">
+  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+  <script>
+    window.onresize=function(){
+      var winWidth=document.body.clientWidth;
+      if(winWidth<=1230){
+        body.className="grid-1010";
+      }else if(winWidth<=1410){
+        body.className="grid-1230";
+      }else if(winWidth>1410){
+        body.className="grid-1410";
+      }else{
+        alert("do not know!");
+      }
+    }
+  </script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body id="body">
+    <script>
+    //初始化状态显示样式判断,放在body后面
+    var winWidth = document.body.clientWidth;
+    if (winWidth <= 1230) {
+        body.className = "grid-1010";
+    } else if (winWidth <= 1410) {
+        body.className = "grid-1230";
+    } else if (winWidth > 1410) {
+        body.className = "grid-1410";
+    } else {
+        alert("do not know!");
+    }
+    </script>
+    <div class="vg-body">
+        <!--任务成长值 开始-->
+        <div class="vg_title">
+            <p>任务成长值</p>
+        </div>
+        <div class="vg_task">
+            <div class="arrowbtn-left"></div>
+            <div class="arrowbtn-right"></div>
+            <div class="vg_tasklist">
+                <ul class="cf" id="switchPic">
+                    <li>
+                        <img src="img/01.jpg">
+                        <div class="rightinfo">
+                            <h3>开通年费会员</h3>
+                            <p>奖励成长值<span>500</span>点</p>
+                            <a href="javascript:;">已完成></a>
+                        </div>
+                        <div class="task_hover">
+                            <p class="task_desc">一次性开通年费会员（12个月及以上）</p>
+                            <p class="task_limittimes">月限<span>1</span>次</p>
+                            <a href="javascript:;" class="done">已完成</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/01.jpg">
+                        <div class="rightinfo">
+                            <h3>开通连续包月</h3>
+                            <p>奖励成长值<span>200</span>点</p>
+                            <a href="javascript:;">去完成></a>
+                        </div>
+                        <div class="task_hover">
+                            <p class="task_desc">一次性开通年费会员（12个月及以上）</p>
+                            <p class="task_limittimes">月限<span>1</span>次</p>
+                            <a href="javascript:;">去完成></a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/01.jpg">
+                        <div class="rightinfo">
+                            <h3>升级成为SVIP</h3>
+                            <p>奖励成长值<span>100</span>点</p>
+                            <a href="javascript:;">去完成></a>
+                        </div>
+                        <div class="task_hover">
+                            <p class="task_desc">一次性开通年费会员（12个月及以上）</p>
+                            <p class="task_limittimes">月限<span>1</span>次</p>
+                            <a href="javascript:;">去完成></a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/01.jpg">
+                        <div class="rightinfo">
+                            <h3>关注微信公众号</h3>
+                            <p>奖励成长值<span>50</span>点</p>
+                            <a href="javascript:;">去完成></a>
+                        </div>
+                        <div class="task_hover">
+                            <p class="task_desc">一次性开通年费会员（12个月及以上）</p>
+                            <p class="task_limittimes">月限<span>1</span>次</p>
+                            <a href="javascript:;">去完成></a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/01.jpg">
+                        <div class="rightinfo">
+                            <h3>开通月费会员</h3>
+                            <p>奖励成长值<span>20</span>点</p>
+                            <a href="javascript:;">去完成></a>
+                        </div>
+                        <div class="task_hover">
+                            <p class="task_desc">一次性开通年费会员（12个月及以上）</p>
+                            <p class="task_limittimes">月限<span>1</span>次</p>
+                            <a href="javascript:;">去完成></a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/01.jpg">
+                        <div class="rightinfo">
+                            <h3>签到</h3>
+                            <p>奖励成长值<span>10</span>点</p>
+                            <a href="javascript:;">去完成></a>
+                        </div>
+                        <div class="task_hover">
+                            <p class="task_desc">一次性开通年费会员（12个月及以上）</p>
+                            <p class="task_limittimes">月限<span>1</span>次</p>
+                            <a href="javascript:;">去完成></a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/01.jpg">
+                        <div class="rightinfo">
+                            <h3>注册登录</h3>
+                            <p>奖励成长值<span>10</span>点</p>
+                            <a href="javascript:;">去完成></a>
+                        </div>
+                        <div class="task_hover">
+                            <p class="task_desc">一次性开通年费会员（12个月及以上）</p>
+                            <p class="task_limittimes">月限<span>1</span>次</p>
+                            <a href="javascript:;">去完成></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--任务成长值 结束-->
+    </div>
+</body>
+<script>
+//task growth
+var switchPic = (function() {
+
+    /*
+now:当前第几个li
+linum:总共几个li
+shownum:要展示几个li
+w_li:li的宽度
+marginR_li:li的右边距
+*/
+    var now = 1;
+    var linum, shownum, offset, w_li, marginR_li, pre, next, wrap;
+
+    function init(o) {
+        pre = o.preBtn;
+        next = o.nextBtn;
+        wrap = o.wrap;
+        bindBtn();
+    }
+
+    function btnShow() {
+        getInfo();
+        if (linum <= shownum) { //如果li总个数小于要展示的个数，pre和next都不显示
+            pre.hide();
+            next.hide();
+        } else if (now == 1) { //初始化，只显示next
+            pre.hide();
+            next.show();
+        } else if (now == linum - shownum + 1) { //到最后一组，只显示pre
+            pre.show();
+            next.hide();
+        } else { //中间pre,next都显示。
+            pre.show();
+            next.show();
+        }
+    }
+
+    function getInfo() {
+        linum = $("#switchPic").find("li").size();
+        if ($("#body").hasClass("grid-1010")) {
+            shownum = 3;
+            w_li = wrap.find("li").outerWidth(); //算上了border的宽度
+            marginR_li = parseInt(wrap.find("li").css("marginRight"));
+            offset = w_li + marginR_li;
+        } else if ($("#body").hasClass("grid-1230")) {
+            shownum = 4;
+            w_li = wrap.find("li").outerWidth(); //算上了border的宽度
+            marginR_li = parseInt(wrap.find("li").css("marginRight"));
+            offset = w_li + marginR_li;
+        } else if ($("#body").hasClass("grid-1410")) {
+            shownum = 4;
+            w_li = wrap.find("li").outerWidth(); //算上了border的宽度
+            marginR_li = parseInt(wrap.find("li").css("marginRight"));
+            offset = w_li + marginR_li;
+        }
+    }
+
+    function bindBtn() {
+        btnShow();
+        next.on("click", function() {
+            now++;
+            btnShow();
+            wrap.stop(true).animate({
+                "margin-left": -(now - 1) * offset
+            });
+        });
+        pre.on("click", function() {
+            now--;
+            btnShow();
+            wrap.stop(true).animate({
+                "margin-left": -(now - 1) * offset
+            });
+        });
+
+        $(window).resize(function() {
+            now = 1;
+            btnShow();
+            wrap.animate({
+                "margin-left": 0
+            });
+        });
+    }
+    return {
+        init: init
+    }
+})();
+
+switchPic.init({
+    preBtn: $(".arrowbtn-left"),
+    nextBtn: $(".arrowbtn-right"),
+    wrap: $("#switchPic")
+});
+</script>
+
+</html>

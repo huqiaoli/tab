@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>jquery无缝滚动切换</title>
+<link rel="stylesheet" type="text/css" href="css/hdw.css"/>
+<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+        var i=4;
+        var page=1;
+        var timer=null;
+        var jqWidth=$('.a5').width();
+        var page_last=Math.ceil($('.a6 ul li').length/i);
+		$(".prev").css("display","none")
+
+        //向右切换
+        $('.next').click(function(){ 
+            rightMove()
+        });
+
+        //向左切换
+        $('.prev').click(function(){   
+            if(page!=1){
+                /*$('.a6').animate({left:'-='+jqWidth*(page_last-1)},'1000');
+                page=page_last;*/
+				 $('.a6').animate({left:'+='+jqWidth},'1000');
+                page--;
+				if(page==1){
+			$(".prev").css("display","none")
+			$(".next").css("display","block")
+			}else{
+				$(".prev").css("display","block")
+				$(".next").css("display","block")
+			}
+			
+            }
+			
+        });
+		
+        
+         //鼠标点击小图标的时候切换
+          /*  $('.a3 span').click(function(){
+             $(this).addClass('one').siblings('span').removeClass('one');
+             $('.a6').animate({left:-jqWidth*($('.a3 span').index(this))+'px'},'1000');
+             page=$('.a3 span').index(this)+1;
+
+         })
+
+         //定义自动切换功能
+      function move(){
+             timer=setInterval(function(){
+              rightMove();
+             },4000);
+         };
+         move();
+        
+        //自动切换功能鼠标移入停止
+        $('.a1').mouseover(function(){
+            clearInterval(timer);
+        });
+        //自动切换功能鼠标移出开始
+        $('.a1').mouseout(function(){
+            move();
+        });*/
+
+        //向右移动函数
+        function rightMove(){
+            if(page!=page_last){
+                /*$('.a6').animate({left:'0px'},'1000')\
+                page=1;*/
+				 $('.a6').animate({left:'-='+jqWidth},'1000')
+                page++;
+				if(page==page_last){
+			$(".next").css("display","none")
+			$(".prev").css("display","block")
+			}else{
+				$(".prev").css("display","block")
+				$(".next").css("display","block")
+			}
+            }else{
+               
+            };
+
+            };
+    });
+	
+
+
+
+</script>
+</head>
+
+<body>
+<div class="a1">
+  <span class="prev">prev</span> <span class="next">next</span>
+  <div class="a5">
+    <div class="a6">
+      <ul class="a7">
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+		
+        
+      </ul>
+    </div>
+  </div>
+</div>
+<ul class="a0">
+<li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+        <li><a href=""><img src="img/01.jpg" alt="hdw" /></a></span></li>
+</ul>
+</body>
+</html>
