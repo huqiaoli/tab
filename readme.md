@@ -75,6 +75,7 @@ $(selector).stop(stopAll,goToEnd)
 
 - stopAll，可选，规定是否停止被选元素的所有加入队列的动画。
 - goToEnd，可选，规定是否允许完成当前的动画。该参数只能在设置了stopAll参数时使用。
+
 具体用法：
 
 - stop(true)等价于stop(true,false): 停止被选元素的所有加入队列的动画。
