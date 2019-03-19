@@ -57,7 +57,7 @@ margin-right的值在jquery中用css("marginRight")获取
 同时要注意，页面缩放的时候，需要重置一些状态。
 
 
-相关动画中
+#####相关动画中
 
 
 ```
